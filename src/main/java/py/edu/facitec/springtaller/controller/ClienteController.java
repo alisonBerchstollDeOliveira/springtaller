@@ -20,7 +20,7 @@ public class ClienteController {
 		@RequestMapping("/clientes")
 		//Viene los datos del formulario y se pasa al objeto
 		public String save(Cliente cliente){
-			clienteDAO.save(cliente);
+			clienteDAO.guardar(cliente, cliente.getId());
 			System.out.println("Registrado el cliente: "+cliente);
 			return "/clientes/ok";
 		}

@@ -9,12 +9,24 @@ import py.edu.facitec.springtaller.model.Cliente;
 
 @Repository
 //Clase encargada de la manipulacion de datos, posibilita posteriormente utilizar la anotacion Awwired
-public class ClienteDAO {
-	//Gestionar el entity manager
+public class ClienteDAO extends DAOGenerico<Cliente>{
 	@PersistenceContext
-	private EntityManager manager;
+	private EntityManager em;
 	
-	public void save(Cliente cliente){
-		manager.persist(cliente);
+	public ClienteDAO() {
+		super(Cliente.class);
 	}
+	@Override
+	protected EntityManager getEntityManager() {
+		return em;
+	
+	
+	}
+//	//Gestionar el entity manager
+//	@PersistenceContext
+//	private EntityManager manager;
+//	
+//	public void save(Cliente cliente){
+//		manager.persist(cliente);
+//	}
 }
