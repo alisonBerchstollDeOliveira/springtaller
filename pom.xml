@@ -24,37 +24,37 @@
     </plugins>
   </build>
   <dependencies>
-  <dependency>
-	<groupId>org.hibernate</groupId>
-	<artifactId>hibernate-entitymanager</artifactId>
-	<version>4.3.0.Final</version>
-  </dependency>
-  <dependency>
-	<groupId>org.hibernate</groupId>
-	<artifactId>hibernate-core</artifactId>
-	<version>4.3.0.Final</version>
-  </dependency>
-  <dependency>
-	<groupId>org.hibernate.javax.persistence</groupId>
-	<artifactId>hibernate-jpa-2.1-api</artifactId>
-	<version>1.0.0.Final</version>
-  </dependency>
-  <dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-orm</artifactId>
-	<version>4.1.0.RELEASE</version>
-  </dependency>
-  <dependency>
-	<groupId>mysql</groupId>
-	<artifactId>mysql-connector-java</artifactId>
-	<version>5.1.15</version>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>4.3.0.Final</version>
 	</dependency>
 	<dependency>
-	<groupId>org.postgresql</groupId>
-	<artifactId>postgresql</artifactId>
-	<version>9.4-1201-jdbc4</version>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>4.3.0.Final</version>
 	</dependency>
-  
+	<dependency>
+		<groupId>org.hibernate.javax.persistence</groupId>
+		<artifactId>hibernate-jpa-2.1-api</artifactId>
+		<version>1.0.0.Final</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>4.1.0.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.15</version>
+	</dependency>
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.4-1201-jdbc4</version>
+	</dependency>
+
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
@@ -73,51 +73,74 @@
 		<scope>provided</scope>
 	</dependency>
 	<dependency>
-	<groupId>javax.servlet.jsp.jstl</groupId>
-	<artifactId>jstl-api</artifactId>
-	<version>1.2</version>
-	<exclusions>
-	<exclusion>
-	<groupId>javax.servlet</groupId>
-	<artifactId>servlet-api</artifactId>
-	</exclusion>
-	</exclusions>
+		<groupId>javax.servlet.jsp.jstl</groupId>
+		<artifactId>jstl-api</artifactId>
+		<version>1.2</version>
+		<exclusions>
+			<exclusion>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
 	<dependency>
-	<groupId>org.glassfish.web</groupId>
-	<artifactId>jstl-impl</artifactId>
-	<version>1.2</version>
-	<exclusions>
-	<exclusion>
-	<groupId>javax.servlet</groupId>
-	<artifactId>servlet-api</artifactId>
-	</exclusion>
-	</exclusions>
+		<groupId>org.glassfish.web</groupId>
+		<artifactId>jstl-impl</artifactId>
+		<version>1.2</version>
+		<exclusions>
+			<exclusion>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
 	<!-- Logging -->
 	<dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>slf4j-api</artifactId>
-	<version>1.6.1</version>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.6.1</version>
 	</dependency>
 	<dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>jcl-over-slf4j</artifactId>
-	<version>1.6.1</version>
-	<scope>runtime</scope>
+		<groupId>org.slf4j</groupId>
+		<artifactId>jcl-over-slf4j</artifactId>
+		<version>1.6.1</version>
+		<scope>runtime</scope>
 	</dependency>
 	<dependency>
-	<groupId>org.slf4j</groupId>
-	<artifactId>slf4j-log4j12</artifactId>
-	<version>1.6.1</version>
-	<scope>runtime</scope>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-log4j12</artifactId>
+		<version>1.6.1</version>
+		<scope>runtime</scope>
 	</dependency>
 	<dependency>
-	<groupId>log4j</groupId>
-	<artifactId>log4j</artifactId>
-	<version>1.2.16</version>
-	<scope>runtime</scope>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.16</version>
+		<scope>runtime</scope>
 	</dependency>
+	<!-- Conversion a JSON -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-core</artifactId>
+		<version>2.5.1</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>2.5.1</version>
+	</dependency>
+	<!-- xml -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-oxm</artifactId>
+		<version>4.1.0.RELEASE</version>
+	</dependency>
+	<dependency>
+		<groupId>com.thoughtworks.xstream</groupId>
+		<artifactId>xstream</artifactId>
+		<version>1.4.8</version>
+	</dependency>
+	
 	
 </dependencies>
 </project>

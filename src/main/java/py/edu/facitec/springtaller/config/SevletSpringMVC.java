@@ -1,6 +1,10 @@
 package py.edu.facitec.springtaller.config;
 
+import javax.servlet.Filter;
+
+import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
 
 public class SevletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -20,6 +24,12 @@ public class SevletSpringMVC extends AbstractAnnotationConfigDispatcherServletIn
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
 		return new String[]{"/"};
+	}
+	// Tener habilitado en el EntityManager durante lasrequisiciones.
+	//durante las subconsultas
+	@Override
+	protected Filter[] getServletFilters() {
+		return new Filter[]{new OpenEntityManagerInViewFilter()};
 	}
 
 }

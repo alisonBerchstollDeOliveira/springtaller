@@ -3,6 +3,7 @@ package py.edu.facitec.springtaller.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,7 +13,7 @@ public class Producto {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
+	@Column(length=100,nullable=false,unique=true)
 	private String descripcion;
 	
 	private Date fechaVencimiento;
