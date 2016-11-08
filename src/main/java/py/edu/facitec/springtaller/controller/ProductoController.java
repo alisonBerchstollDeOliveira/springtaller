@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import py.edu.facitec.springtaller.dao.ProductoDAO;
 import py.edu.facitec.springtaller.model.Producto;
@@ -23,7 +24,6 @@ import py.edu.facitec.springtaller.model.Producto;
 public class ProductoController {
 	@Autowired
 	private ProductoDAO dao;
-	
 	
 	//Regitra un producto					//Anotacion que permite cargar los datos al objeto producto
 	@RequestMapping(method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE ,produces=MediaType.APPLICATION_JSON_VALUE)
@@ -52,5 +52,10 @@ public class ProductoController {
 		}
 		dao.eliminar(productoEliminar);
 		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	@RequestMapping("/form")
+	public ModelAndView formulario(){
+		return new ModelAndView("/productos/form");
+		
 	}
 }

@@ -19,17 +19,20 @@ import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import py.edu.facitec.springtaller.controller.HomeController;
+import py.edu.facitec.springtaller.controller.ProductoController;
 import py.edu.facitec.springtaller.dao.ClienteDAO;
 import py.edu.facitec.springtaller.dao.DepartamentoDAO;
 import py.edu.facitec.springtaller.dao.GerenteDAO;
 import py.edu.facitec.springtaller.dao.ItemPedidoDAO;
+import py.edu.facitec.springtaller.dao.PedidoDAO;
+import py.edu.facitec.springtaller.dao.UsuarioDAO;
 import py.edu.facitec.springtaller.model.Producto;
 import py.edu.facitec.springtaller.resolver.CustomXMLViewResolver;
 import py.edu.facitec.springtaller.resolver.JsonViewResolver;
 //Active el componente MVC de Spring para trabajar con Sevlet
 @EnableWebMvc
 //Carga las classes necesarias para iniciar la aplicacion
-@ComponentScan(basePackageClasses={HomeController.class, ClienteDAO.class, DepartamentoDAO.class, GerenteDAO.class,ItemPedidoDAO.class})
+@ComponentScan(basePackageClasses={HomeController.class, ClienteDAO.class, DepartamentoDAO.class, GerenteDAO.class,ItemPedidoDAO.class,ProductoController.class,PedidoDAO.class,UsuarioDAO.class})
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 	//Gestiona coo un nuervo componente de la aplicacion
 	@Bean

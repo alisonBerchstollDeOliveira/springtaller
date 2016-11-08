@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import py.edu.facitec.springtaller.dao.UsuarioDAO;
 import py.edu.facitec.springtaller.model.Usuario;
@@ -51,4 +52,10 @@ public class UsuarioController {
 		dao.eliminar(usuarioEliminar);
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
+	@RequestMapping("/form")
+	public ModelAndView formulario(){
+		return new ModelAndView("/usuarios/form");
+		
+	}
+	
 }

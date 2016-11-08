@@ -4,17 +4,15 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+
+import py.edu.facitec.springtaller.general.General;
 @Entity
-public class Pedido {
-	
-	@Id
-	@GeneratedValue
-	private Long id;
-	
+public class Pedido extends General{
+
 	private Date fechaToma;
 	
 	private Date fechaEntrega;
@@ -28,16 +26,11 @@ public class Pedido {
 	@ManyToOne
 	private Usuario usuario;
 	
+	@JsonIdentityReference
 	@OneToMany(mappedBy="pedido")
 	private List<ItemPedido> itemPedidos;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
 
 	public Date getFechaToma() {
 		return fechaToma;
@@ -89,7 +82,7 @@ public class Pedido {
 
 	@Override
 	public String toString() {
-		return "Pedido [id=" + id + ", fechaToma=" + fechaToma + ", fechaEntrega=" + fechaEntrega + ", total=" + total
+		return "Pedido [fechaToma=" + fechaToma + ", fechaEntrega=" + fechaEntrega + ", total=" + total
 				+ ", cliente=" + cliente + ", usuario=" + usuario + ", itemPedidos=" + itemPedidos + "]";
 	}
 	
